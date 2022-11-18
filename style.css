@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-family: 'Roboto', sans-serif;
+  --bg-header-color: #092d38;
+  --bg-table-odd-color: #030b0d;
+  --bg-table-even-color: #06181c;
+  --primary-color-text: #e1e1e6;
+  --remove-text-color: #f75a68;
+  --bg-button-color: #065e7c;
+}
+
+body {
+  background: black;
+  font-size: var(--font-family);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 11.5rem 0 8.7rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-submit {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search-submit input {
+  width: 46.2rem;
+  height: 4.8rem;
+
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1.6rem;
+  color: #7c7c8a;
+  background-color: #06181c;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+}
+
+.search-submit button {
+  width: 17rem;
+  height: 4.8rem;
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  background-color: var(--bg-button-color);
+
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: white;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search-submit button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-family);
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--primary-color-text);
+}
+
+table th {
+  background: var(--bg-header-color);
+  text-align: left;
+
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  gap: 1.2rem;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160%;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid #4a808c;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--bg-table-odd-color);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--bg-table-even-color);
+}
+
+table td {
+  align-items: center;
+  text-align: left;
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+  gap: 1.6rem;
+
+  width: fit-content;
+  height: 10.4rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.user a {
+  text-decoration: none;
+
+  font-weight: 400;
+
+  padding: 0px;
+  gap: 0.8rem;
+}
+
+.user p {
+  font-weight: bold;
+
+  font-size: 2rem;
+  line-height: 160%;
+}
+
+.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.remove {
+  cursor: pointer;
+  color: var(--remove-text-color);
+}
