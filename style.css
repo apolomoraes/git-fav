@@ -35,7 +35,7 @@ body {
 
 #app {
   max-width: 112rem;
-  margin: 0 auto;
+  margin: 0 auto 8rem;
 }
 
 header {
@@ -135,20 +135,16 @@ table th:last-child {
 
 tbody tr:nth-child(odd) {
   background: var(--bg-table-odd-color);
-  border-bottom: 1px solid #4a808c;
 }
 
 tbody tr:nth-child(even) {
   background: var(--bg-table-even-color);
-  border-radius: 1.2rem;
 }
 
-table td {
+table tr td {
   align-items: center;
   padding: 2.4rem 2.4rem 2.4rem 4rem;
   gap: 1.6rem;
-
-  width: fit-content;
 }
 
 tbody tr:last-child td:first-child {
@@ -159,7 +155,7 @@ tbody tr:last-child td:last-child {
   border-bottom-right-radius: 1.2rem;
 }
 
-.user {
+td.user div {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -170,7 +166,6 @@ tbody tr:last-child td:last-child {
 
   font-weight: 400;
 
-  padding: 0px;
   gap: 0.8rem;
 }
 
@@ -196,4 +191,35 @@ tbody tr:last-child td:last-child {
 
 .remove:hover {
   color: rgb(207, 29, 29);
+}
+
+.no-favorite {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+  height: 10rem;
+
+  background: #030b0d;
+}
+
+.no-favorite:last-child {
+  border-bottom-left-radius: 1.2rem;
+}
+.no-favorite:last-child {
+  border-bottom-right-radius: 1.2rem;
+}
+
+.no-favorite h1 {
+  color: #4e5455;
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.hide {
+  display: none;
 }
