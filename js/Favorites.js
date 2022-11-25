@@ -9,6 +9,18 @@ export class Favorites {
     this.noLine()
   }
 
+  // load guarda os dados no banco de dados do navegador
+  load() {
+    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
+  }
+
+  // salva os dados no localstorage, porque só jogar no local não resolve
+  save() {
+    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
+    this.onAddLine()
+    this.noLine()
+  }
+
   // confere se tem alguma linha na table, se não tiver apareça a tela de nenhum favorito
   onAddLine() {
     if (localStorage.getItem('@github-favorites:') == '[]') {
@@ -21,18 +33,6 @@ export class Favorites {
     if (localStorage.getItem('@github-favorites:') !== '[]') {
       this.root.querySelector('.no-favorite').classList.add('hide')
     }
-  }
-
-  // load guarda os dados no banco de dados do navegador
-  load() {
-    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
-  }
-
-  // salva os dados no localstorage, porque só jogar no local não resolve
-  save() {
-    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
-    this.onAddLine()
-    this.noLine()
   }
 
   async add(input) {
